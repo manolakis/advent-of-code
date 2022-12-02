@@ -2,15 +2,19 @@ import { readFile } from '../../common/readFile.js';
 import { round as round1 } from './algorithm.1.js';
 import { round as round2 } from './algorithm.2.js';
 
-const data = await readFile('./input');
+export const execute = async () => {
+  const data = await readFile(`./2022/02/input`);
 
-let partOne = 0;
-let partTwo = 0;
+  let firstStrategy = 0;
+  let secondStrategy = 0;
 
-data.split(/\r?\n/).forEach(input => {
-  partOne += round1(input);
-  partTwo += round2(input);
-});
+  data.split(/\r?\n/).forEach(input => {
+    firstStrategy += round1(input);
+    secondStrategy += round2(input);
+  });
 
-console.log('Part one:', partOne);
-console.log('Part two:', partTwo);
+  console.group('Day 02');
+  console.log('Total score first strategy:', firstStrategy);
+  console.log('Total score second strategy:', secondStrategy);
+  console.groupEnd();
+};

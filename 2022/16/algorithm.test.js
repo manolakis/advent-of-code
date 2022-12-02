@@ -5,7 +5,7 @@ describe('day 16', () => {
   [
     ['A', 'A'],
   ].forEach(([input, value]) => {
-    it(`should return ${value} when round is ${input}`, async () => {
+    xit(`to be defined`, async () => {
       expect(compute(input)).to.be.equal(value);
     });
   });

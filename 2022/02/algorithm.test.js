@@ -3,7 +3,7 @@ import { round as round1 } from "./algorithm.1.js";
 import { round as round2 } from "./algorithm.2.js";
 
 describe('day 02', () => {
-  context('part one', () => {
+  context('first strategy', () => {
     [
       ['A Y', 8],
       ['B X', 1],
@@ -15,7 +15,7 @@ describe('day 02', () => {
     });
   });
 
-  context('part two', () => {
+  context('second strategy', () => {
     [
       ['A Y', 4],
       ['B X', 1],
