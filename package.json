@@ -1,0 +1,19 @@
+{
+  "name": "@manolakis/adventofcode",
+  "version": "1.0.0",
+  "description": "Advent of Code",
+  "main": "index.js",
+  "type": "module",
+  "author": "Manuel Martin",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha test --recursive --extension test.js .",
+    "test:watch": "npm run test:mocha -- --parallel --watch"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.3.0",
+    "@types/mocha": "^9.1.0",
+    "chai": "^4.3.7",
+    "mocha": "^10.1.0"
+  }
+}
