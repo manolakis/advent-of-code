@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node 2022/index.js",
     "test": "mocha test --recursive --extension test.js .",
-    "test:watch": "npm run test:mocha -- --parallel --watch"
+    "test:watch": "npm run test -- --parallel --watch"
   },
   "devDependencies": {
     "@types/chai": "^4.3.0",

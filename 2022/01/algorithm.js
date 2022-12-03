@@ -3,7 +3,7 @@
   const list = [];
   let elf = 0;
 
-  data.split(/\r?\n/).forEach(input => {
+  data.forEach(input => {
     const value = input.trim();
 
     if (value === '') {

@@ -8,7 +8,7 @@ export const execute = async () => {
   let firstStrategy = 0;
   let secondStrategy = 0;
 
-  data.split(/\r?\n/).forEach(input => {
+  data.forEach(input => {
     firstStrategy += round1(input);
     secondStrategy += round2(input);
   });
