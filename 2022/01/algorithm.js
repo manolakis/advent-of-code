@@ -23,9 +23,8 @@
 
 export const getMaxCaloriesConsumed = data => Math.max(...getCaloriesList(data));
 
-export const getCaloriesConsumedByTopThree = data => {
-  const [first, second, third] = getCaloriesList(data).sort((a, b) => b-a);
-
-  return first + second + third;
-};
+export const getCaloriesConsumedByTopThree = data => getCaloriesList(data)
+  .sort((a, b) => b-a)
+  .slice(0, 3)
+  .reduce((total, calories) => total + calories);
 
