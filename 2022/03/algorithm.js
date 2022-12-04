@@ -1,4 +1,4 @@
-export const findTheSharedItem = rucksack => {
+const findTheSharedItem = rucksack => {
   const items = [...rucksack];
   const firstCompartment = items.slice(0, items.length / 2);
   const secondCompartment = items.slice(items.length / 2);
@@ -10,8 +10,9 @@ const PRIORITIES = '_abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
 const getPriority = item => PRIORITIES.indexOf(item);
 
-export const getSumOfPriorities = rucksacks => rucksacks.map(rucksack => findTheSharedItem(rucksack))
-  .map(item => getPriority(item))
+export const getSumOfPriorities = rucksacks => rucksacks
+  .map(findTheSharedItem)
+  .map(getPriority)
   .reduce((sum, priority) => sum + priority);
 
 const divideRucksacksByGroups = rucksacks => {
@@ -29,6 +30,6 @@ const findTheSharedItemInGroup = ([first, second, third]) => [...first]
   .find(item => third.includes(item));
 
 export const getSumOfGroupsPriorities = rucksacks => divideRucksacksByGroups(rucksacks)
-  .map(groupOfRucksacks => findTheSharedItemInGroup(groupOfRucksacks))
-  .map(item => getPriority(item))
+  .map(findTheSharedItemInGroup)
+  .map(getPriority)
   .reduce((sum, priority) => sum + priority);
