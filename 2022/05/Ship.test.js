@@ -1,19 +1,20 @@
 import {expect} from 'chai';
+import {readFile} from "../../common/readFile.js";
 import {Ship} from "./Ship.js";
 import {CrateMover9000} from "./CrateMover9000.js";
 import {CrateMover9001} from "./CrateMover9001.js";
-import {readFile} from "../../common/readFile.js";
+import {CratesOnTopOfEachStackPrinter} from "./CratesOnTopOfEachStackPrinter.js";
 
 describe('Ship', () => {
 
-  context('toString', () => {
+  context('with CratesOnTopOfEachStackPrinter', () => {
     it(`should print the top items of the stacks`, async () => {
       const ship = new Ship({
         stacks: ['ZN', 'MCD', 'P'],
       });
       const expectedResult = 'NDP';
 
-      expect(ship.printCratesOnTopOfEachStack()).to.be.equal(expectedResult);
+      expect(ship.print(new CratesOnTopOfEachStackPrinter())).to.be.equal(expectedResult);
     });
   });
 
@@ -28,7 +29,7 @@ describe('Ship', () => {
 
       orders.forEach(order => ship.moveCrates(order));
 
-      expect(ship.printCratesOnTopOfEachStack()).to.be.equal(expectedResult);
+      expect(ship.print(new CratesOnTopOfEachStackPrinter())).to.be.equal(expectedResult);
     });
   });
 
@@ -43,7 +44,7 @@ describe('Ship', () => {
 
       orders.forEach(order => ship.moveCrates(order));
 
-      expect(ship.printCratesOnTopOfEachStack()).to.be.equal(expectedResult);
+      expect(ship.print(new CratesOnTopOfEachStackPrinter())).to.be.equal(expectedResult);
     });
   });
 });
