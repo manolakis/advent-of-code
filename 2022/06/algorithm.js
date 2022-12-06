@@ -1,16 +1,10 @@
 const findThePositionOfDifferentCharacters = (input, sequenceSize) => {
-  const marker = [...input.substring(0, sequenceSize -1)];
+  for (let index = 0; index < input.length - sequenceSize; index++) {
+    const sequence = input.substring(index, index + sequenceSize);
 
-  for (let index = sequenceSize -1; index < input.length; index++) {
-    const char = input.charAt(index);
-
-    marker.push(char);
-
-    if (new Set(marker).size === sequenceSize) {
-      return index + 1;
+    if (new Set([...sequence]).size === sequenceSize) {
+      return index + sequenceSize;
     }
-
-    marker.shift();
   }
 
   return 0;
