@@ -11,8 +11,9 @@ describe('Ship', () => {
       const ship = new Ship({
         stacks: ['ZN', 'MCD', 'P'],
       });
+      const expectedResult = 'NDP';
 
-      expect(ship.toString()).to.be.equal('NDP');
+      expect(ship.printCratesOnTopOfEachStack()).to.be.equal(expectedResult);
     });
   });
 
@@ -27,7 +28,7 @@ describe('Ship', () => {
 
       orders.forEach(order => ship.moveCrates(order));
 
-      expect(ship.toString()).to.be.equal(expectedResult);
+      expect(ship.printCratesOnTopOfEachStack()).to.be.equal(expectedResult);
     });
   });
 
@@ -42,7 +43,7 @@ describe('Ship', () => {
 
       orders.forEach(order => ship.moveCrates(order));
 
-      expect(ship.toString()).to.be.equal(expectedResult);
+      expect(ship.printCratesOnTopOfEachStack()).to.be.equal(expectedResult);
     });
   });
 });

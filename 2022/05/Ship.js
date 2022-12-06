@@ -15,9 +15,7 @@ export class Ship {
     this.crane.move(this.#stacks, quantity, origin, destiny);
   }
 
-  toString() {
-    return this.#stacks
-      .map(stack => stack.at(-1))
-      .join('');
+  print(printer) {
+    return printer.print(this.#stacks);
   }
 }
