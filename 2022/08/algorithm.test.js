@@ -1,12 +1,19 @@
-import { expect } from 'chai';
-import { compute } from "./algorithm.js";
+import {expect} from 'chai';
+import {readFile} from "../../common/readFile.js";
+import {getNumberOfTreesVisibleFromOutsideTheGrid, getHighestScenicScore} from "./algorithm.js";
 
 describe('day 08', () => {
-  [
-    ['A', 'A'],
-  ].forEach(([input, value]) => {
-    xit(`to be defined`, async () => {
-      expect(compute(input)).to.be.equal(value);
-    });
+  it(`should get the number of trees visible from outside the grid`, async () => {
+    const input = await readFile(`./2022/08/test-input`);
+    const expectedValue = 21;
+
+    expect(getNumberOfTreesVisibleFromOutsideTheGrid(input)).to.be.equal(expectedValue);
+  });
+
+  it(`should get the highest scenic score`, async () => {
+    const input = await readFile(`./2022/08/test-input`);
+    const expectedValue = 8;
+
+    expect(getHighestScenicScore(input)).to.be.equal(expectedValue);
   });
 });
