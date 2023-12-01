@@ -1,7 +1,7 @@
 import { asyncForEach } from "../common/asyncForEach.js";
 
 
-console.group('2022');
+console.group('2023');
 
 const days = [...Array(32)
   .keys()]

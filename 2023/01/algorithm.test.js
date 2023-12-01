@@ -1,12 +1,25 @@
 import { expect } from 'chai';
-import { compute } from "./algorithm.js";
+import { readFile } from "../../common/readFile.js";
+import { getCalibrationValues, getFixedCalibrationValues } from "./algorithm.js";
 
 describe('2023 - day 01', () => {
-  [
-    ['A', 'A'],
-  ].forEach(([input, value]) => {
-    xit(`to be defined`, async () => {
-      expect(compute(input)).to.be.equal(value);
+
+  context(`getCalibrationValues`, () => {
+    it(`should retrieve the calibration values`, async () => {
+      const input = await readFile(`./2023/01/test-input`);
+      const expectedResult = 142;
+
+      expect(getCalibrationValues(input)).to.be.eq(expectedResult);
     });
   });
+
+  context(`getFixedCalibrationValues`, () => {
+    it(`should retrieve the calibration values`, async () => {
+      const input = await readFile(`./2023/01/test2-input`);
+      const expectedResult = 281;
+
+      expect(getFixedCalibrationValues(input)).to.be.eq(expectedResult);
+    });
+  });
+
 });

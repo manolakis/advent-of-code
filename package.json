@@ -7,7 +7,7 @@
   "author": "Manuel Martin",
   "license": "MIT",
   "scripts": {
-    "start": "node 2022/index.js",
+    "start": "node 2023/index.js",
     "test": "mocha test --recursive --extension test.js .",
     "test:watch": "npm run test -- --parallel --watch"
   },
