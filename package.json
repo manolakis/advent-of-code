@@ -12,9 +12,9 @@
     "test:watch": "npm run test -- --parallel --watch"
   },
   "devDependencies": {
-    "@types/chai": "^4.3.0",
-    "@types/mocha": "^9.1.0",
-    "chai": "^4.3.7",
-    "mocha": "^10.1.0"
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
   }
 }
