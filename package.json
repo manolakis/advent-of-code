@@ -9,7 +9,8 @@
   "workspaces": [
     "common",
     "2022",
-    "2023"
+    "2023",
+    "2024"
   ],
   "scripts": {
     "test": "npm run test --workspaces --if-present"

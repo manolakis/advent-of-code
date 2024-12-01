@@ -1,0 +1,18 @@
+{
+  "name": "@manolakis/aoc-2024",
+  "version": "1.0.0",
+  "description": "Advent of Code 2024",
+  "main": "index.js",
+  "type": "module",
+  "author": "Manuel Martin",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha test --recursive --extension test.js .",
+    "test:watch": "npm run test -- --parallel --watch"
+  },
+  "devDependencies": {
+    "@manolakis/aoc-common": "^1.0.0",
+    "vitest": "^2.1.6"
+  }
+}

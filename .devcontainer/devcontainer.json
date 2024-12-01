@@ -19,5 +19,12 @@
 			"userUid": "1001",
 			"userGid": "1001"
 		}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"EditorConfig.EditorConfig"
+			]
+		}
 	}
 }
