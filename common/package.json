@@ -1,0 +1,11 @@
+{
+  "name": "@manolakis/aoc-common",
+  "version": "1.0.0",
+  "description": "Advent of Code - Common",
+  "type": "module",
+  "author": "Manuel Martin",
+  "license": "MIT",
+  "exports": {
+    "./*": "./src/*"
+  }
+}

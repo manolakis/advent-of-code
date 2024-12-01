@@ -1,5 +1,5 @@
-import {readFile} from "../../common/readFile.js";
-import {getCalibrationValues, getFixedCalibrationValues} from "./algorithm.js";
+import { readFile } from "@manolakis/aoc-common/readFile.js";
+import { getCalibrationValues, getFixedCalibrationValues } from "./algorithm.js";
 
 export const execute = async () => {
   const data = await readFile(`./2023/01/input`);

@@ -1,8 +1,8 @@
-import {Ship} from "./Ship.js";
-import {readFile} from "../../common/readFile.js";
-import {CrateMover9000} from "./CrateMover9000.js";
-import {CrateMover9001} from "./CrateMover9001.js";
-import {CratesOnTopOfEachStackPrinter} from "./CratesOnTopOfEachStackPrinter.js";
+import { Ship } from "./Ship.js";
+import { readFile } from "@manolakis/aoc-common/readFile.js";
+import { CrateMover9000 } from "./CrateMover9000.js";
+import { CrateMover9001 } from "./CrateMover9001.js";
+import { CratesOnTopOfEachStackPrinter } from "./CratesOnTopOfEachStackPrinter.js";
 
 export const execute = async () => {
   const stacks = [
@@ -18,14 +18,14 @@ export const execute = async () => {
   ];
 
   const shipWithCraneMover9000 = new Ship({
-      crane: new CrateMover9000(),
-      stacks,
-    }
+    crane: new CrateMover9000(),
+    stacks,
+  }
   );
   const shipWithCraneMover9001 = new Ship({
-      crane: new CrateMover9001(),
-      stacks,
-    }
+    crane: new CrateMover9001(),
+    stacks,
+  }
   );
 
   const orders = await readFile(`./2022/05/input`);

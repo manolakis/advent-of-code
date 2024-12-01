@@ -1,5 +1,5 @@
 import { totalOfAssignmentsThatOneRangeFullyContainsTheOther, totalOfAssignmentsThatRangesOverlap } from "./algorithm.js";
-import {readFile} from "../../common/readFile.js";
+import { readFile } from "@manolakis/aoc-common/readFile.js";
 
 export const execute = async () => {
   const data = await readFile(`./2022/04/input`);

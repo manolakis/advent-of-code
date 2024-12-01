@@ -1,5 +1,5 @@
-import {readFile} from "../../common/readFile.js";
-import {getSumOfPossibleGames, getSumOfThePowerOfMinimumSets} from "./algorithm.js";
+import { readFile } from "@manolakis/aoc-common/readFile.js";
+import { getSumOfPossibleGames, getSumOfThePowerOfMinimumSets } from "./algorithm.js";
 
 export const execute = async () => {
   const input = await readFile(`./2023/02/input`);

@@ -1,20 +1,17 @@
 {
-  "name": "@manolakis/adventofcode",
+  "name": "@manolakis/aoc",
   "version": "1.0.0",
   "description": "Advent of Code",
   "main": "index.js",
   "type": "module",
   "author": "Manuel Martin",
   "license": "MIT",
+  "workspaces": [
+    "common",
+    "2022",
+    "2023"
+  ],
   "scripts": {
-    "start": "node 2023/index.js",
-    "test": "mocha test --recursive --extension test.js .",
-    "test:watch": "npm run test -- --parallel --watch"
-  },
-  "devDependencies": {
-    "@types/chai": "^4.3.11",
-    "@types/mocha": "^10.0.6",
-    "chai": "^4.3.10",
-    "mocha": "^10.2.0"
+    "test": "npm run test --workspaces --if-present"
   }
 }

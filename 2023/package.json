@@ -1,0 +1,21 @@
+{
+  "name": "@manolakis/aoc-2023",
+  "version": "1.0.0",
+  "description": "Advent of Code 2023",
+  "main": "index.js",
+  "type": "module",
+  "author": "Manuel Martin",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js",
+    "test": "mocha test --recursive --extension test.js .",
+    "test:watch": "npm run test -- --parallel --watch"
+  },
+  "devDependencies": {
+    "@manolakis/aoc-common": "^1.0.0",
+    "@types/chai": "^4.3.11",
+    "@types/mocha": "^10.0.6",
+    "chai": "^4.3.10",
+    "mocha": "^10.2.0"
+  }
+}

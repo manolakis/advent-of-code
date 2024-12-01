@@ -1,5 +1,5 @@
-import {readFile} from "../../common/readFile.js";
-import {getSumOfGroupsPriorities, getSumOfPriorities} from "./algorithm.js";
+import { readFile } from "@manolakis/aoc-common/readFile.js";
+import { getSumOfGroupsPriorities, getSumOfPriorities } from "./algorithm.js";
 
 export const execute = async () => {
   const data = await readFile(`./2022/03/input`);

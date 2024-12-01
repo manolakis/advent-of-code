@@ -1,4 +1,4 @@
-import { readFile } from '../../common/readFile.js';
+import { readFile } from '@manolakis/aoc-common/readFile.js';
 import { round as round1 } from './algorithm.1.js';
 import { round as round2 } from './algorithm.2.js';
 

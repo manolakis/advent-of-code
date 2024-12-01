@@ -1,4 +1,4 @@
-import { readFile } from '../../common/readFile.js';
+import { readFile } from '@manolakis/aoc-common/readFile.js';
 import { getMaxCaloriesConsumed, getCaloriesConsumedByTopThree } from "./algorithm.js";
 
 

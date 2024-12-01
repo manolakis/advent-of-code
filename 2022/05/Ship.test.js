@@ -1,9 +1,9 @@
-import {expect} from 'chai';
-import {readFile} from "../../common/readFile.js";
-import {Ship} from "./Ship.js";
-import {CrateMover9000} from "./CrateMover9000.js";
-import {CrateMover9001} from "./CrateMover9001.js";
-import {CratesOnTopOfEachStackPrinter} from "./CratesOnTopOfEachStackPrinter.js";
+import { expect } from 'chai';
+import { readFile } from "@manolakis/aoc-common/readFile.js";
+import { Ship } from "./Ship.js";
+import { CrateMover9000 } from "./CrateMover9000.js";
+import { CrateMover9001 } from "./CrateMover9001.js";
+import { CratesOnTopOfEachStackPrinter } from "./CratesOnTopOfEachStackPrinter.js";
 
 describe('Ship', () => {
 
@@ -24,7 +24,7 @@ describe('Ship', () => {
         crane: new CrateMover9000(),
         stacks: ['ZN', 'MCD', 'P'],
       });
-      const orders = await readFile(`./2022/05/test-input`);
+      const orders = await readFile(`./05/test-input`);
       const expectedResult = 'CMZ';
 
       orders.forEach(order => ship.moveCrates(order));
@@ -39,7 +39,7 @@ describe('Ship', () => {
         crane: new CrateMover9001(),
         stacks: ['ZN', 'MCD', 'P'],
       });
-      const orders = await readFile(`./2022/05/test-input`);
+      const orders = await readFile(`./05/test-input`);
       const expectedResult = 'MCD';
 
       orders.forEach(order => ship.moveCrates(order));
